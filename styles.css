@@ -54,3 +54,140 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.6;
 }
+/* --- Master Timeline Layout Elements --- */
+
+.timeline-container {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+    .timeline-container h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
+    }
+
+    .timeline-container .subtitle {
+        color: var(--text-secondary);
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+    }
+
+/* The Vertical Track Line */
+.timeline-axis {
+    border-left: 2px solid var(--border-subtle);
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-left: 0.5rem;
+}
+
+/* Individual Milestone Cards */
+.timeline-card {
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-subtle);
+    padding: 2rem;
+    border-radius: 8px;
+    position: relative;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+    /* Visual Node Indicator Dot on the Left Line */
+    .timeline-card::before {
+        content: "";
+        position: absolute;
+        left: calc(-2rem - 7px);
+        top: 2.3rem;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--border-subtle);
+        border: 2px solid var(--bg-primary);
+    }
+
+    /* Style Modifications for Active/In-Progress Milestones */
+    .timeline-card.current {
+        border-color: var(--accent);
+    }
+
+        .timeline-card.current::before {
+            background-color: var(--accent);
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+/* Internal Card Text Spacing */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.timeline-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.timeline-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+}
+
+/* Custom Checklist Inside the Cards */
+.timeline-card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+    .timeline-card ul li {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        position: relative;
+        padding-left: 1.5rem;
+    }
+
+        /* Custom Checklist Checkboxes */
+        .timeline-card ul li::before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            color: var(--text-secondary);
+        }
+
+.timeline-card.current ul li::before {
+    color: var(--accent);
+}
+
+/* Status Badges */
+.badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+}
+
+.badge-progress {
+    background-color: rgba(2, 195, 154, 0.1);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.badge-future {
+    background-color: rgba(138, 153, 173, 0.1);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-subtle);
+}
+
+.date {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
