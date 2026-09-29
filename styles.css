@@ -1,0 +1,47 @@
+﻿:root {
+    --bg-primary: #0b0f19; /* Deep slate-navy canvas */
+    --panel-bg: #121826; /* Slightly lighter container backgrounds */
+    --text-primary: #ffffff; /* Crisp white for readable headers */
+    --text-secondary: #8a99ad; /* Soft slate-grey for body descriptions */
+    --accent: #02c39a; /* Your core structural Teal accent */
+    --accent-hover: #00a896; /* Darker, richer Teal for interactive states */
+    --border-subtle: #1f293d; /* Clean divider grid lines */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+    nav ul li a {
+        color: var(--text-secondary);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        nav ul li a.btn-highlight {
+            background-color: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+            nav ul li a.btn-highlight:hover {
+                background-color: var(--accent);
+                color: var(--bg-primary);
+            }
+
+body
+{
+}
