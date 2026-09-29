@@ -8,6 +8,12 @@
     --border-subtle: #1f293d; /* Clean divider grid lines */
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -42,6 +48,9 @@ nav ul {
                 color: var(--bg-primary);
             }
 
-body
-{
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
 }
