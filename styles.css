@@ -165,8 +165,40 @@ body {
     color: var(--accent);
 }
 
-/* Status Badges */
-.badge {
+/* Style Modifications for Active/In-Progress Milestones */
+.timeline-card.current {
+    border-color: var(--accent);
+}
+
+    .timeline-card.current::before {
+        background-color: var(--accent);
+        box-shadow: 0 0 10px var(--accent);
+    }
+
+/* Style Modifications for Completed Milestones */
+.timeline-card.complete {
+    border-color: #00a896;
+    opacity: 0.85;
+}
+
+    .timeline-card.complete::before {
+        background-color: #00a896;
+        box-shadow: none;
+    }
+
+    .timeline-card.complete ul li::before {
+        content: "✓";
+        color: #00a896;
+        font-weight: 700;
+    }
+
+/* Internal Card Text Spacing */
+.card-header {
+    display: flex;
+}
+
+    /* Status Badges */
+    .badge {
     font-size: 0.75rem;
     font-weight: 700;
     padding: 0.25rem 0.5rem;
@@ -431,4 +463,17 @@ body {
         padding: 1rem;
         gap: 1rem;
     }
+}
+
+.badge-progress {
+    background-color: rgba(2, 195, 154, 0.1);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+/* 🟢 ADD THIS NEW MOBILE RULE HERE: */
+.badge-complete {
+    background-color: rgba(0, 168, 150, 0.1);
+    color: #00a896;
+    border: 1px solid #00a896;
 }
