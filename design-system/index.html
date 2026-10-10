@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdenLab | AI Workspace Design</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="/" class="logo">AdenLab</a>
+            <ul>
+                <li><a href="/timeline">Timeline</a></li>
+                <li><a href="/design-system" class="active">UI Design</a></li>
+                <li><a href="/chat-engine">JS Engine</a></li>
+                <li><a href="/system-manager">Sys Monitor</a></li>
+                <li><a href="/data-analytics">Data Pipeline</a></li>
+                <li><a href="/ml-classifier">ML Model</a></li>
+                <li><a href="/assistant" class="btn-highlight">AI Agent</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="workspace-wrapper">
+        <!-- Left Panel: The Interactive Chat Interface Viewport -->
+        <section class="panel chat-panel">
+            <div class="panel-header">
+                <h2>AI_Agent_Terminal</h2>
+                <span class="status-indicator-dot online"></span>
+            </div>
+            <div class="chat-log-container">
+                <div class="system-message">System: Core initialized. Awaiting user telemetry input pipeline...</div>
+            </div>
+            <div class="chat-input-bar">
+                <input type="text" placeholder="Type system or automation command..." disabled>
+                <button disabled>Send</button>
+            </div>
+        </section>
+
+        <!-- Right Panel: Home Network Topology & IoT Hardware Cards -->
+        <section class="panel iot-panel">
+            <div class="panel-header">
+                <h2>IoT_Hardware_Topology</h2>
+            </div>
+            <div class="iot-grid-container">
+                <!-- Device Card 1: Lounge Lights -->
+                <div class="iot-card">
+                    <div class="card-meta">
+                        <span class="device-type">Light</span>
+                        <span class="device-status status-on">ON</span>
+                    </div>
+                    <h3>Lounge Main</h3>
+                    <p class="telemetry">Current State: Active</p>
+                </div>
+
+                <!-- Device Card 2: Smart Airfryer -->
+                <div class="iot-card">
+                    <div class="card-meta">
+                        <span class="device-type">Appliance</span>
+                        <span class="device-status status-off">OFF</span>
+                    </div>
+                    <h3>Smart Airfryer</h3>
+                    <p class="telemetry">Target Temp: 0°C</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
