@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdenLab | JS Chat Engine</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">AdenLab</a>
+            <ul>
+                <li><a href="/timeline">Timeline</a></li>
+                <li><a href="/design-system">UI Design</a></li>
+                <li><a href="/chat-engine" class="active">JS Engine</a></li>
+                <li><a href="/system-manager">Sys Monitor</a></li>
+                <li><a href="/data-analytics">Data Pipeline</a></li>
+                <li><a href="/ml-classifier">ML Model</a></li>
+                <li><a href="/assistant" class="btn-highlight">AI Agent</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="workspace-wrapper" style="grid-template-columns: 1fr; max-width: 900px;">
+        <!-- Single-Column Active Chat Engine Panel -->
+        <section class="panel chat-panel" style="height: 650px;">
+            <div class="panel-header">
+                <h2>JS_Client_Engine // Milestone 2</h2>
+                <span class="status-indicator-dot online"></span>
+            </div>
+
+            <div class="chat-log-container" id="chatLog">
+                <div class="system-message">System: Vanilla JS ES6 state engine initialized. Connected to local mock socket stream. Type a command to test asynchronous telemetry fetch loops...</div>
+            </div>
+
+            <form class="chat-input-bar" id="chatForm">
+                <input type="text" id="userInput" placeholder="Test a command (e.g., status, lights on, telemetry)..." autocomplete="off">
+                <button type="submit" id="sendBtn" style="cursor: pointer;">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Milestone 2 Vanilla JS State Engine Script -->
+    <script>
+        const chatForm = document.getElementById('chatForm');
+        const userInput = document.getElementById('userInput');
+        const chatLog = document.getElementById('chatLog');
+
+        chatForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const text = userInput.value.trim();
+            if (!text) return;
+
+            // 1. Append user message bubble
+            const userMsg = document.createElement('div');
+            userMsg.style.cssText = "margin: 0.75rem 0; text-align: right; color: var(--text-primary); font-family: monospace;";
+            userMsg.innerHTML = `<span style="background: rgba(255,255,255,0.05); padding: 0.5rem 1rem; border-radius: 4px; display: inline-block;">&gt; ${escapeHtml(text)}</span>`;
+            chatLog.appendChild(userMsg);
+
+            userInput.value = '';
+            chatLog.scrollTop = chatLog.scrollHeight;
+
+            // 2. Simulate async fetch network latency & response
+            const typingMsg = document.createElement('div');
+            typingMsg.style.cssText = "margin: 0.75rem 0; color: var(--text-secondary); font-family: monospace; font-style: italic;";
+            typingMsg.textContent = "System: Processing asynchronous packet loop...";
+            chatLog.appendChild(typingMsg);
+            chatLog.scrollTop = chatLog.scrollHeight;
+
+            setTimeout(() => {
+                typingMsg.remove();
+                const systemReply = document.createElement('div');
+                systemReply.style.cssText = "margin: 0.75rem 0; color: var(--accent); font-family: monospace; background: rgba(2, 195, 154, 0.05); padding: 0.75rem 1rem; border-radius: 4px; border-left: 3px solid var(--accent);";
+                systemReply.innerHTML = `<strong>Response:</strong> Executed intent match for &quot;${escapeHtml(text)}&quot;. Status code 200 OK (Local Mock Stream).`;
+                chatLog.appendChild(systemReply);
+                chatLog.scrollTop = chatLog.scrollHeight;
+            }, 800);
+        });
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+    </script>
+</body>
+</html>
