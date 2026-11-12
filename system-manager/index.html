@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdenLab | System Manager</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">AdenLab</a>
+            <ul>
+                <li><a href="/timeline">Timeline</a></li>
+                <li><a href="/design-system">UI Design</a></li>
+                <li><a href="/chat-engine">JS Engine</a></li>
+                <li><a href="/system-manager" class="active">Sys Monitor</a></li>
+                <li><a href="/data-analytics">Data Pipeline</a></li>
+                <li><a href="/ml-classifier">ML Model</a></li>
+                <li><a href="/assistant" class="btn-highlight">AI Agent</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="workspace-wrapper">
+        <!-- Left Panel: Cluster Nodes & Infrastructure Health -->
+        <section class="panel iot-panel">
+            <div class="panel-header">
+                <h2>Infrastructure_Nodes // Milestone 3</h2>
+                <span class="badge badge-complete">DEPLOYED</span>
+            </div>
+            <div class="iot-grid-container">
+                <!-- Node 1: Proxmox FastAPI Orchestrator -->
+                <div class="iot-card">
+                    <div class="card-meta">
+                        <span class="device-type">Proxmox LXC 100</span>
+                        <span class="device-status status-on">ONLINE</span>
+                    </div>
+                    <h3>FastAPI Backend</h3>
+                    <p class="telemetry">Runtime: Python 3.13 // systemd active</p>
+                </div>
+
+                <!-- Node 2: TrueNAS Storage Share -->
+                <div class="iot-card">
+                    <div class="card-meta">
+                        <span class="device-type">TrueNAS SMB</span>
+                        <span class="device-status status-on">MOUNTED</span>
+                    </div>
+                    <h3>Audit Log Storage</h3>
+                    <p class="telemetry">Mount: /mnt/ai-storage/ (192.168.1.131)</p>
+                </div>
+
+                <!-- Node 3: Home Assistant Local Proxy -->
+                <div class="iot-card">
+                    <div class="card-meta">
+                        <span class="device-type">REST Telemetry</span>
+                        <span class="device-status status-on">SYNCED</span>
+                    </div>
+                    <h3>Home Assistant Proxy</h3>
+                    <p class="telemetry">Scraper: uv runtime // JSON append</p>
+                </div>
+
+                <!-- Node 4: Windows Inference Node -->
+                <div class="iot-card">
+                    <div class="card-meta">
+                        <span class="device-type">Compute Node</span>
+                        <span class="device-status status-on">STANDBY</span>
+                    </div>
+                    <h3>Ollama LLM Host</h3>
+                    <p class="telemetry">Endpoint: 192.168.1.50:11434</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Panel: Persistent NAS Audit Log Viewer -->
+        <section class="panel chat-panel">
+            <div class="panel-header">
+                <h2>NAS_Audit_Stream // assistant_activity.log</h2>
+                <span class="status-indicator-dot online"></span>
+            </div>
+            <div class="chat-log-container">
+                <div class="system-message" style="margin-bottom: 1rem;">[SYSTEM] Mounted CIFS share //192.168.1.131/ai-storage with mapped lxc.idmap UID/GID permissions.</div>
+                <div style="color: var(--text-secondary); margin-bottom: 0.75rem;">2026-11-12 17:30:04 | INFO | FastAPI /health check passed (200 OK)</div>
+                <div style="color: var(--text-secondary); margin-bottom: 0.75rem;">2026-11-12 17:35:12 | INFO | Home Assistant state snapshot appended to NAS log</div>
+                <div style="color: var(--text-secondary); margin-bottom: 0.75rem;">2026-11-12 17:42:50 | INFO | Verified remote Ollama heartbeat at 192.168.1.50:11434</div>
+                <div style="color: var(--accent);">2026-11-12 17:48:00 | READY | Telemetry pipeline awaiting Phase 2 analytics ingestion...</div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
