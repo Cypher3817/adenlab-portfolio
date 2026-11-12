@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdenLab | Data Pipeline</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">AdenLab</a>
+            <ul>
+                <li><a href="/timeline">Timeline</a></li>
+                <li><a href="/design-system">UI Design</a></li>
+                <li><a href="/chat-engine">JS Engine</a></li>
+                <li><a href="/system-manager">Sys Monitor</a></li>
+                <li><a href="/data-analytics" class="active">Data Pipeline</a></li>
+                <li><a href="/ml-classifier">ML Model</a></li>
+                <li><a href="/assistant" class="btn-highlight">AI Agent</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="workspace-wrapper" style="grid-template-columns: 1fr; max-width: 900px;">
+        <section class="panel" style="min-height: 600px;">
+            <div class="panel-header">
+                <h2>IoT_Analytics_Pipeline // Milestone 4 (Architecture Spec)</h2>
+                <span class="badge badge-future">FUTURE FEATURE</span>
+            </div>
+
+            <div style="padding: 2rem;">
+                <h3 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1.3rem;">Automated Data-Cleansing & Metrics Engine</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.7;">
+                    The upcoming analytics pipeline is designed to ingest raw, unstructured JSON telemetry logs mounted from your TrueNAS storage share (`/mnt/ai-storage/`), processing historical device states and power metrics.
+                </p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+                    <div style="background: var(--bg-primary); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: 6px;">
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem; font-family: monospace;">// Planned Stack</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Python runtime utilizing <strong>Pandas</strong> and <strong>NumPy</strong> for high-performance data vectorization and anomaly detection.</p>
+                    </div>
+                    <div style="background: var(--bg-primary); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: 6px;">
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem; font-family: monospace;">// Target Output</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Automated aggregation of room power consumption trends, active habit tracking, and structured reporting tables.</p>
+                    </div>
+                </div>
+
+                <div class="system-message">
+                    Status: Architecture specified. Awaiting completion of Phase 2 ingestion scripts before activating live Pandas processing loops.
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
