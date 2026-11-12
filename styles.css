@@ -8,11 +8,50 @@
     --border-subtle: #1f293d; /* Clean divider grid lines */
 }
 
+/* Fixed universal selector from - to * */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+/* --- Global Header & Navigation (Desktop Default) --- */
+header {
+    background-color: var(--panel-bg);
+    border-bottom: 1px solid var(--border-subtle);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    font-family: monospace;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+}
+
+    .logo:hover {
+        color: var(--accent);
+    }
 
 nav ul {
     list-style: none;
@@ -29,7 +68,8 @@ nav ul {
         transition: color 0.2s ease;
     }
 
-        nav ul li a:hover {
+        nav ul li a:hover,
+        nav ul li a.active {
             color: var(--accent);
         }
 
@@ -48,12 +88,27 @@ nav ul {
                 color: var(--bg-primary);
             }
 
-body {
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.6;
+/* --- Home Page Hero Component --- */
+.hero {
+    max-width: 900px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+    text-align: center;
 }
+
+    .hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: var(--text-primary);
+        letter-spacing: -0.02em;
+    }
+
+    .hero p {
+        color: var(--text-secondary);
+        font-size: 1.15rem;
+        line-height: 1.8;
+    }
 /* --- Master Timeline Layout Elements --- */
 
 .timeline-container {
