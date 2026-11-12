@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdenLab | ML Classifier</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">AdenLab</a>
+            <ul>
+                <li><a href="/timeline">Timeline</a></li>
+                <li><a href="/design-system">UI Design</a></li>
+                <li><a href="/chat-engine">JS Engine</a></li>
+                <li><a href="/system-manager">Sys Monitor</a></li>
+                <li><a href="/data-analytics">Data Pipeline</a></li>
+                <li><a href="/ml-classifier" class="active">ML Model</a></li>
+                <li><a href="/assistant" class="btn-highlight">AI Agent</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="workspace-wrapper" style="grid-template-columns: 1fr; max-width: 900px;">
+        <section class="panel" style="min-height: 600px;">
+            <div class="panel-header">
+                <h2>Edge_Intent_Classifier // Milestone 5 (Architecture Spec)</h2>
+                <span class="badge badge-future">FUTURE FEATURE</span>
+            </div>
+
+            <div style="padding: 2rem;">
+                <h3 style="color: var(--text-primary); margin-bottom: 1rem; font-size: 1.3rem;">Localized Machine Learning Routing Pipeline</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.7;">
+                    The edge classifier architecture converts raw natural language commands into mathematical token blocks, training a lightweight regression model to route inputs locally before querying heavier LLM endpoints.
+                </p>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+                    <div style="background: var(--bg-primary); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: 6px;">
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem; font-family: monospace;">// Vectorization Engine</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Using <strong>Scikit-Learn</strong> feature vectorizers to map command strings into structured numerical matrices.</p>
+                    </div>
+                    <div style="background: var(--bg-primary); border: 1px solid var(--border-subtle); padding: 1.25rem; border-radius: 6px;">
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem; font-family: monospace;">// Logical Routing</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem;">Logistic Regression classification models to dispatch intents directly to smart home automation scripts.</p>
+                    </div>
+                </div>
+
+                <div class="system-message">
+                    Status: Architecture specified. Awaiting Phase 3 training corpus collection from local household telemetry logs.
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
