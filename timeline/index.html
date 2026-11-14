@@ -13,7 +13,26 @@
     <header>
         <nav>
             <a href="/" class="logo">
-                AdenLab <span class="status-pill"><span class="pulse-dot"></span> PROXMOX ACTIVE</span>
+                <!-- SVG Monogram Logo -->
+                <svg class="logo-icon" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Left leg of the 'A' -->
+                    <path d="M5 26 L13 6" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" />
+                    <!-- Shared center leg ('A' right leg / 'L' vertical stem) -->
+                    <path d="M13 6 L20 26" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" />
+                    <!-- Crossbar of the 'A' -->
+                    <path d="M8 19 L17 19" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" />
+                    <!-- Foot of the 'L' -->
+                    <path d="M20 26 L28 26" stroke="var(--accent)" stroke-width="3" stroke-linecap="round" />
+                </svg>
+
+                <!-- Site Title -->
+                <span class="logo-text">AdenLab</span>
+
+                <!-- Status Pill -->
+                <span id="system-status-pill" class="status-pill">
+                    <span id="status-dot" class="pulse-dot"></span>
+                    <span id="status-text">PROXMOX ACTIVE</span>
+                </span>
             </a>
             <ul>
                 <li><a href="/timeline" class="active">Timeline</a></li>
