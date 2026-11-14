@@ -884,3 +884,26 @@ nav ul {
         box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
     }
 }
+
+/* Navigation Logo Layout */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    text-decoration: none;
+}
+
+/* Monogram SVG Icon Sizing */
+.logo-icon {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+}
+
+/* Site Title Typography */
+.logo-text {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
