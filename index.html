@@ -9,7 +9,9 @@
 <body>
     <header>
         <nav>
-            <a href="/" class="logo">AdenLab</a>
+            <a href="/" class="logo">
+                AdenLab <span id="system-status-pill" class="status-pill"><span id="status-dot" class="pulse-dot"></span> <span id="status-text">PROXMOX ACTIVE</span></span>
+            </a>
             <ul>
                 <li><a href="/timeline">Timeline</a></li>
                 <li><a href="/design-system">UI Design</a></li>
@@ -23,105 +25,131 @@
     </header>
 
     <main>
-    <!-- Hero Section -->
-    <section class="hero">
-        <span class="hero-tag">Self-Hosted Infrastructure &bull; Local AI &bull; Full-Stack Telemetry</span>
-        <h1>Systems & AI Engineering</h1>
-        <p>Welcome to AdenLab. This living portfolio tracks my technical progression from core frontend design to localised machine learning automation running on private Proxmox infrastructure.</p>
-        <div class="hero-actions">
-            <a href="/timeline" class="btn-primary">View Engineering Roadmap</a>
-            <a href="/assistant" class="btn-secondary">Explore Live Workspace</a>
-        </div>
-    </section>
-
-    <!-- Current Build Status Strip -->
-    <section class="status-strip">
-        <div class="status-item">
-            <span class="status-label">Sequential Progress</span>
-            <span class="status-value">Milestones 0–3 Deployed</span>
-        </div>
-        <div class="status-item">
-            <span class="status-label">Active Sprint</span>
-            <span class="status-value active-text">Milestone 4: IoT Data Cruncher</span>
-        </div>
-        <div class="status-item">
-            <span class="status-label">Hardware Acceleration</span>
-            <span class="status-value early-text">CUDA / Qwen3-4B Ready</span>
-        </div>
-    </section>
-
-    <!-- Project Origin & Context -->
-    <section class="project-context">
-        <div class="context-card">
-            <h2>The 2020/2021 Origin</h2>
-            <p>This project began as my final-year university computer science capstone in 2020/2021. While it earned a passing grade for its architectural design and core concepts, time constraints meant the full end-to-end vision was never completely finished.</p>
-        </div>
-        <div class="context-card">
-            <h2>The 2026 Ground-Up Rebuild</h2>
-            <p>Rather than leaving it as a static archive, I am rebuilding the entire platform from scratch using modern tooling. It functions simultaneously as a production smart-home automation engine and a public portfolio sandbox powered by realistic dummy telemetry.</p>
-        </div>
-    </section>
-
-    <!-- Core Engineering Pillars -->
-    <section class="pillars-section">
-        <h2>Core System Architecture</h2>
-        <div class="pillars-grid">
-            <div class="pillar-card">
-                <h3>01. Frontend & State Engine</h3>
-                <p>Zero-framework semantic HTML5, modular CSS Grid layouts, and vanilla ES6+ asynchronous client state management built for low-latency responsiveness.</p>
-                <a href="/design-system" class="pillar-link">Inspect UI System &rarr;</a>
+        <!-- Hero Section -->
+        <section class="hero">
+            <span class="hero-tag">Self-Hosted Infrastructure &bull; Local AI &bull; Full-Stack Telemetry</span>
+            <h1>Systems & AI Engineering</h1>
+            <p>Welcome to AdenLab. This living portfolio tracks my technical progression from core frontend design to localised machine learning automation running on private Proxmox infrastructure.</p>
+            <div class="hero-actions">
+                <a href="/timeline" class="btn-primary">View Engineering Roadmap</a>
+                <a href="/assistant" class="btn-secondary">Explore Live Workspace</a>
             </div>
-            <div class="pillar-card">
-                <h3>02. IoT Telemetry & Analytics</h3>
-                <p>Python 3.12+ data collection agents polling local Home Assistant instances, storing logs on TrueNAS SMB shares, and crunching room metrics via Pandas.</p>
-                <a href="/data-analytics" class="pillar-link">View Data Pipeline &rarr;</a>
-            </div>
-            <div class="pillar-card">
-                <h3>03. Edge ML & Local LLM</h3>
-                <p>Scikit-Learn intent routing paired with GPU-accelerated local inference (<code>llama.cpp</code> / CUDA) running inside isolated Proxmox LXC containers.</p>
-                <a href="/ml-classifier" class="pillar-link">Explore AI Stack &rarr;</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Tech Stack & Toolchain -->
-    <section class="tech-stack-section">
-        <h2>Core Infrastructure &amp; Toolchain</h2>
-        <div class="badge-cloud">
-            <span class="tech-badge">Proxmox VE</span>
-            <span class="tech-badge">TrueNAS</span>
-            <span class="tech-badge">Debian Linux</span>
-            <span class="tech-badge">Python 3.13</span>
-            <span class="tech-badge">FastAPI</span>
-            <span class="tech-badge">CUDA / llama.cpp</span>
-            <span class="tech-badge">Vanilla JS (ES6+)</span>
-            <span class="tech-badge">Cloudflare Zero Trust</span>
-        </div>
-    </section>
+        <!-- Current Build Status Strip -->
+        <section class="status-strip">
+            <div class="status-item">
+                <span class="status-label">Sequential Progress</span>
+                <span class="status-value">Milestones 0–3 Deployed</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">Active Sprint</span>
+                <span class="status-value active-text">Milestone 4: IoT Data Cruncher</span>
+            </div>
+            <div class="status-item">
+                <span class="status-label">Hardware Acceleration</span>
+                <span class="status-value early-text">CUDA / Qwen3-4B Ready</span>
+            </div>
+        </section>
 
-    <!-- Recent System Activity / Changelog Feed -->
-    <section class="activity-section">
-        <h2>Recent System Activity</h2>
-        <div class="activity-feed">
-            <div class="activity-item">
-                <span class="activity-date">November 2026</span>
-                <p><strong>Early Deployment:</strong> Completed Milestone 6 GPU inference backend (Qwen3-4B-Instruct via CUDA on GTX 960) ahead of schedule during driver troubleshooting.</p>
+        <!-- Project Origin & Context -->
+        <section class="project-context">
+            <div class="context-card">
+                <h2>The 2020/2021 Origin</h2>
+                <p>This project began as my final-year university computer science capstone in 2020/2021. While it earned a passing grade for its architectural design and core concepts, time constraints meant the full end-to-end vision was never completely finished.</p>
             </div>
-            <div class="activity-item">
-                <span class="activity-date">November 2026</span>
-                <p><strong>Design System:</strong> Modernized site architecture with responsive CSS grid layouts, dark slate theme, and timeline milestone badges.</p>
+            <div class="context-card">
+                <h2>The 2026 Ground-Up Rebuild</h2>
+                <p>Rather than leaving it as a static archive, I am rebuilding the entire platform from scratch using modern tooling. It functions simultaneously as a production smart-home automation engine and a public portfolio sandbox powered by realistic dummy telemetry.</p>
             </div>
-            <div class="activity-item">
-                <span class="activity-date">October 2026</span>
-                <p><strong>Infrastructure Base:</strong> Configured isolated TrueNAS storage pools, secure SMB shares, and Proxmox hypervisor routing.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-</main>
+        <!-- Core Engineering Pillars -->
+        <section class="pillars-section">
+            <h2>Core System Architecture</h2>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <!-- Removed stray '1.' here -->
+                    <h3>Frontend & State Engine</h3>
+                    <p>Zero-framework semantic HTML5, modular CSS Grid layouts, and vanilla ES6+ asynchronous client state management built for low-latency responsiveness.</p>
+                    <a href="/design-system" class="pillar-link">Inspect UI System &rarr;</a>
+                </div>
+                <div class="pillar-card">
+                    <h3>02. IoT Telemetry & Analytics</h3>
+                    <p>Python 3.12+ data collection agents polling local Home Assistant instances, storing logs on TrueNAS SMB shares, and crunching room metrics via Pandas.</p>
+                    <a href="/data-analytics" class="pillar-link">View Data Pipeline &rarr;</a>
+                </div>
+                <div class="pillar-card">
+                    <h3>03. Edge ML & Local LLM</h3>
+                    <p>Scikit-Learn intent routing paired with GPU-accelerated local inference (<code>llama.cpp</code> / CUDA) running inside isolated Proxmox LXC containers.</p>
+                    <a href="/ml-classifier" class="pillar-link">Explore AI Stack &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ... rest of your main and footer ... -->
+    </main>
 
     <footer>
         <p>AdenLab &bull; Built sequentially from the ground up &bull; Running on Proxmox VE &amp; TrueNAS</p>
     </footer>
+
+    <!-- JavaScript must be inside script tags and before closing body -->
+    <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const statusPill = document.getElementById("system-status-pill");
+                    const statusDot = document.getElementById("status-dot");
+                    const statusText = document.getElementById("status-text");
+
+                    const HEALTH_CHECK_URL = 'https://your-proxmox-ip-or-api/health';
+
+                    async function checkSystemHealth() {
+                        try {
+                            const controller = new AbortController();
+                            const timeoutId = setTimeout(() => controller.abort(), 3000);
+
+                            const response = await fetch(HEALTH_CHECK_URL, {
+                                method: 'GET',
+                                mode: 'no-cors',
+                                signal: controller.signal
+                            });
+
+                            clearTimeout(timeoutId);
+                            setOnlineState();
+                        } catch (error) {
+                            setOfflineState("MAINTENANCE");
+                        }
+                    }
+
+                    function setOnlineState() {
+                        if (statusText) statusText.textContent = "PROXMOX ACTIVE";
+                        if (statusPill) {
+                            statusPill.style.borderColor = "var(--border-subtle)";
+                            statusPill.style.color = "var(--text-secondary)";
+                        }
+                        if (statusDot) {
+                            statusDot.style.backgroundColor = "var(--accent)";
+                            statusDot.style.boxShadow = "0 0 8px var(--accent)";
+                            statusDot.className = "pulse-dot";
+                        }
+                    }
+
+                    function setOfflineState(reason = "OFFLINE") {
+                        if (statusText) statusText.textContent = `PROXMOX ${reason}`;
+                        if (statusPill) {
+                            statusPill.style.borderColor = "rgba(239, 68, 68, 0.4)";
+                            statusPill.style.color = "#ef4444";
+                        }
+                        if (statusDot) {
+                            statusDot.style.backgroundColor = "#ef4444";
+                            statusDot.style.boxShadow = "0 0 8px #ef4444";
+                            statusDot.className = "pulse-dot offline-pulse";
+                        }
+                    }
+
+                    // Uncomment when ready to poll real backend:
+                    // checkSystemHealth();
+                });
+    </script>>
 </body>
 </html>

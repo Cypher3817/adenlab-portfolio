@@ -9,7 +9,9 @@
 <body>
     <header>
         <nav>
-            <a href="/" class="logo">AdenLab</a>
+            <a href="/" class="logo">
+                AdenLab <span id="system-status-pill" class="status-pill"><span id="status-dot" class="pulse-dot"></span> <span id="status-text">PROXMOX ACTIVE</span></span>
+            </a>
             <ul>
                 <li><a href="/timeline">Timeline</a></li>
                 <li><a href="/design-system">UI Design</a></li>
@@ -87,5 +89,63 @@
             </div>
         </section>
     </main>
+
+    <!-- JavaScript must be inside script tags and before closing body -->
+    <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                    const statusPill = document.getElementById("system-status-pill");
+                    const statusDot = document.getElementById("status-dot");
+                    const statusText = document.getElementById("status-text");
+
+                    const HEALTH_CHECK_URL = 'https://your-proxmox-ip-or-api/health';
+
+                    async function checkSystemHealth() {
+                        try {
+                            const controller = new AbortController();
+                            const timeoutId = setTimeout(() => controller.abort(), 3000);
+
+                            const response = await fetch(HEALTH_CHECK_URL, {
+                                method: 'GET',
+                                mode: 'no-cors',
+                                signal: controller.signal
+                            });
+
+                            clearTimeout(timeoutId);
+                            setOnlineState();
+                        } catch (error) {
+                            setOfflineState("MAINTENANCE");
+                        }
+                    }
+
+                    function setOnlineState() {
+                        if (statusText) statusText.textContent = "PROXMOX ACTIVE";
+                        if (statusPill) {
+                            statusPill.style.borderColor = "var(--border-subtle)";
+                            statusPill.style.color = "var(--text-secondary)";
+                        }
+                        if (statusDot) {
+                            statusDot.style.backgroundColor = "var(--accent)";
+                            statusDot.style.boxShadow = "0 0 8px var(--accent)";
+                            statusDot.className = "pulse-dot";
+                        }
+                    }
+
+                    function setOfflineState(reason = "OFFLINE") {
+                        if (statusText) statusText.textContent = `PROXMOX ${reason}`;
+                        if (statusPill) {
+                            statusPill.style.borderColor = "rgba(239, 68, 68, 0.4)";
+                            statusPill.style.color = "#ef4444";
+                        }
+                        if (statusDot) {
+                            statusDot.style.backgroundColor = "#ef4444";
+                            statusDot.style.boxShadow = "0 0 8px #ef4444";
+                            statusDot.className = "pulse-dot offline-pulse";
+                        }
+                    }
+
+                    // Uncomment when ready to poll real backend:
+                    // checkSystemHealth();
+                });
+    </script>
 </body>
 </html>
