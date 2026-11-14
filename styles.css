@@ -279,6 +279,24 @@ nav ul {
     font-weight: 500;
 }
 
+/* Early / Out-of-Sequence Milestone Styling */
+.timeline-card.early-milestone {
+    border-left: 4px solid #f59e0b; /* Amber accent to distinguish from sequential green */
+    background: linear-gradient(145deg, rgba(245, 158, 11, 0.06), rgba(15, 23, 42, 0.4));
+}
+
+.badge-early {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
 /* --- AI Workspace Dashboard Layout Elements --- */
 
 /* The Main Outer Viewport Container Wrapper */

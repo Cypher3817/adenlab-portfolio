@@ -120,16 +120,16 @@
                 </div>
 
                 <!-- Milestone Card 6: The Autonomous Full-Stack AI Assistant Workspace -->
-                <div class="timeline-card future">
+                <div class="timeline-card early-milestone">
                     <div class="card-header">
-                        <span class="badge badge-future">FUTURE FEATURE</span>
-                        <span class="date">Target: Phase 4</span>
+                        <span class="badge badge-early">EARLY DEPLOYMENT (INFRASTRUCTURE)</span>
+                        <span class="date">November 2026</span>
                     </div>
                     <h2>Milestone 6: The Autonomous Full-Stack AI Assistant Workspace</h2>
-                    <p>The flagship capstone assembly. Orchestrating UI, hardware networks, and local accelerated intelligence models.</p>
+                    <p>The flagship capstone assembly. Core GPU inference and backend routing deployed ahead of schedule while resolving hardware driver dependencies.</p>
                     <ul>
-                        <li>Build a fast asynchronous FastAPI backend server web route to link frontend views to backend logic models.</li>
-                        <li>Configure NVIDIA GPU pass-through across the hardware hypervisor kernel to accelerate open-source LLMs via CUDA.</li>
+                        <li>Build a fast asynchronous FastAPI backend server web route (<code>ai-backend</code> LXC container) to link frontend views to local logic models.</li>
+                        <li><strong>Completed Early (Driver/VRAM Resolution):</strong> Configured NVIDIA 580.196.07 GPU pass-through across the Proxmox hypervisor kernel to accelerate Qwen3-4B-Instruct via CUDA 13.0 on the GTX 960, tuning <code>llama-server</code> to a 6,144-token context (<code>-c 6144</code>) and single-slot execution (<code>-np 1</code>) for a stable 2,980 MiB VRAM footprint.</li>
                         <li>Implement background cron-scheduler logic loops (APScheduler) paired with smart plug telemetry to detect incomplete habits (slow cooker, chores, self-care routines).</li>
                         <li>Deploy behavioral psychology system prompting vectors to output proactive, anti-procrastination mobile push notifications based on live house states.</li>
                         <li>Deploy custom Python automation tools alongside Cloudflare Access sandboxing rules to shield live house circuits.</li>
